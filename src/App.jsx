@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import {
   Spinner,
   DotsLoader,
@@ -262,6 +262,8 @@ const loaders = [
   },
 ];
 
+
+
 const sizes = ["small", "medium", "large"];
 
 const colors = ["#8b5cf6", "#06b6d4", "#22c55e", "#ec4899", "#f97316"];
@@ -272,7 +274,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [copiedLoader, setCopiedLoader] = useState(null);
-
+  const now = new Date(); 
   const categories = [
     "All",
     ...new Set(loaders.map((loader) => loader.category)),
@@ -322,14 +324,24 @@ function App() {
   return (
     <div className="app">
       <header className="hero">
-        <span className="badge">35 LOADERS</span>
-        <br /> <br />
+        <div className="top">
+          <span className="badge">35 LOADERS</span>
+        </div>
+        <div className="trybadge">
+          <span className="badge">
+            <a
+              href="https://github.com/mercyarulappan/merix-flow"
+              target="_blank"
+            >
+              {" "}
+              Try it here!{" "}
+            </a>
+          </span>
+        </div>
         <span className="badge">version 1</span>
-
         <h1>
           Merix<span>Flow</span>
         </h1>
-
         <p>
           Creative and colorful loading animations for modern React
           applications.
@@ -385,7 +397,6 @@ function App() {
                 style={{ backgroundColor: color }}
                 onClick={() => setSelectedColor(color)}
                 aria-label={`Select ${color}`}
-
               />
             ))}
           </div>
@@ -437,6 +448,21 @@ function App() {
       {filteredLoaders.length === 0 && (
         <div className="empty-state">No loaders found.</div>
       )}
+
+      <footer>
+        <div>Mercy © {now.getFullYear()}</div>
+        <div className="links">
+          <a
+            href="https://github.com/mercyarulappan/merix-flow"
+            target="_blank"
+          >
+            <i className="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.npmjs.com/package/merix-flow" target="_blank">
+            <i className="fa-brands fa-npm"></i>
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
