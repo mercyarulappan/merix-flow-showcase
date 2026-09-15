@@ -338,7 +338,7 @@ function App() {
             </a>
           </span>
         </div>
-        <span className="badge">version 1</span>
+        {/* <span className="badge">version 1</span> */}
         <h1>
           Merix<span>Flow</span>
         </h1>
