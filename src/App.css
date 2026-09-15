@@ -623,6 +623,13 @@ button {
   text-align: center;
 }
 
+.controls,
+.toolbar,
+.hero,
+.loader-grid {
+  margin: 10px;
+}
+
 /* =========================
    RESPONSIVE
 ========================= */
@@ -631,10 +638,8 @@ button {
   .app {
     margin: 0;
   }
-
-  .hero {
-    margin-bottom: 45px;
-  }
+  
+  
 
   .hero h1 {
     letter-spacing: -3px;
@@ -644,17 +649,13 @@ button {
     font-size: 15px;
   }
 
-  .controls {
-    gap: 25px;
-
-    padding: 18px;
-  }
+  
 
   .loader-grid {
     grid-template-columns:
       repeat(
         auto-fit,
-        minmax(220px, 1fr)
+        minmax(250px, 1fr)
       );
   }
 }
