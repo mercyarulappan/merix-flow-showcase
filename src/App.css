@@ -623,12 +623,7 @@ button {
   text-align: center;
 }
 
-.controls,
-.toolbar,
-.hero,
-.loader-grid {
-  margin: 10px;
-}
+
 
 /* =========================
    RESPONSIVE
@@ -638,6 +633,13 @@ button {
   .app {
     margin: 0;
   }
+
+    .controls,
+    .toolbar,
+    .hero,
+    .loader-grid {
+      margin: 10px;
+    }
   
   
 
@@ -664,6 +666,13 @@ button {
   .app {
     margin: 0;
   }
+
+    .controls,
+    .toolbar,
+    .hero,
+    .loader-grid {
+      margin: 10px;
+    }
 
   .hero h1 {
     font-size: 50px;
